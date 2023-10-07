@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS</title>
+    <link rel="stylesheet" href="SSS.css">
+    <script src="SSS.js"></script>
+</head>
+<body>
+    <header class="header">
+
+        <button class="logo-button" onclick="startLogoRain()">İTÜ MTAL</button>
+        <h1 class="header__heading">
+            <a href="#" class="header__heading-link">
+                <img src="assets/images/logo.png" alt="LM Mezun Ağı Logo">
+                <span class="header__heading-text">LM Forum</span>
+            </a>
+        </h1>
+
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item">
+                    <button style="width: 138px; height: 40px; text-align: center; border-radius: 20px; border: 1.50px #805226 solid;
+                    background-color: transparent; color: #E6E6E6;">
+                        Ana Sayfa
+                    </button>
+                </li>
+                <li class="header__navigation-item" >
+                    <button style="width: 158px; height: 40px; border-radius: 20px; border: 1.50px #805422 solid ; background-color: transparent; color: #E6E6E6;">Hakkımızda</button>
+                </li>
+                <li class="header__navigation-item">
+                    <button style="width: 71px; height: 40px; background: #835E26; border-radius: 20px; border: 1.50px #835E26 solid; color: #E6E6E6; cursor: pointer;">SSS</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="SSS_main">
+        <section class="description" style="padding: 3.6rem 17.5rem 1rem; ">
+            <h1 class="description_title" style="justify-content: center; text-align: center; margin-top: 1cm; margin-bottom: 30px; display: flex; align-items: center; font-family: Montserrat; font-size: 64px;" >SSS</h1>
+            <span class="description_sentence" style="width: 80%; left: 200px;  position: absolute; text-align: center; color: #E6E6E6; font-size: 20px; font-family: Montserrat; font-weight: 500; letter-spacing: 2px; word-wrap: break-word ; top: 250px;" >Aşağıdaki sorulardan cevabını merak ettiklerinizi öğrenmek için tıklayın. Sorunuz aşağıda yoksa “canlı sohbet”e de iletebilirsiniz, en kısa sürede dönüş yapılacaktır, kontrol etmeyi unutmayınız.</span>
+        </section>
+        <section class="questi" >
+            <ul class="question-list">
+                <li class="question-rectangles" onclick="toggleAnswer('answer-1')">
+                    <span class="question-sentence">Soru 1: Bu birinci soru mu?</span>
+                </li>
+                <li id="answer-1" class="answer-sentence">Cevap 1: Evet, bu birinci sorunun cevabıdır.</li>
+                
+            <li class="question-rectangles" onclick="toggleAnswer('answer-2')">
+                <span class="question-sentence">Soru 2: İkinci soru nedir?</span>
+            </li>
+                <li id="answer-2" class="answer-sentence">Cevap 2: İkinci sorunun cevabı şudur.</li>
+                <li class="question-rectangles">
+                    <span class="sentences"></span>
+                </li>
+                <li class="question-rectangles">
+                    <span class="sentences"></span>
+                </li>
+                <li class="question-rectangles">
+                    <span class="sentences"></span>
+                </li>
+            </ul>
+        </section>
+
+        <div class="logo-rain-container"></div>
+    </main>
+
+
+
+    
+</body>
+</html>

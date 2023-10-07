@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="scripts/script.js" defer></script>
+</head>
+<body class="grid-main">
+    <header class="header">
+        <h1 class="header__heading">
+            <a href="#" class="header__heading-link">
+                <img src="assets/images/logo.png" alt="LM Mezun Ağı Logo">
+                <span class="header__heading-text">LM Mezun Ağı</span>
+            </a>
+        </h1>
+        
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link" aria-current="page">Anasayfa</a></li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Topluluklar</a></li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Yarışmalar</a></li>
+                <li class="header__navigation-item"><a href="#" class="header__navigation-link">Harita</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__search">
+            <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+            </svg>
+            <input type="text" class="header__search-input">
+        </div>
+
+        <section class="header__user">
+            <a href="#" class="header__user-settings">
+                <svg class="header__user-icon--settings header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="header__user-notifications">
+                <svg class="header__user-icon--notifications header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="header__user-profile">
+                <img src="assets/images/user-profile.svg" alt="User" class="header__user-profile-image">
+            </a>
+        </section>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar__content">
+            <section class="sidebar__profile">
+                <figure class="sidebar__profile-image">
+                    <img src="assets/images/user-profile.svg" alt="Kullanıcı profil fotoğrafı" class="sidebar__profile-image-source">
+                    <figcaption class="sidebar__profile-image-level"><span>2</span></figcaption>
+                </figure>
+                
+                <section class="sidebar__profile-details">
+                    <p class="sidebar__profile-fullname">Meredith Grey</p>
+                    <p class="sidebar__profile-username">@meredith_grey</p>
+    
+                    <div class="sidebar__profile-followers">
+                        <svg class="sidebar__profile-followers-icon">
+                            <use xlink:href="assets/sprite.svg#icon-person"></use>
+                        </svg>
+                        <p class="sidebar__profile-followers-count">75</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="sidebar__events">
+                <h2 class="sidebar__events-title heading-secondary">Yaklaşan Etkinlikler</h2>
+                <select name="events-month" id="events-month" class="sidebar__events-month">
+                    <option value="nisan">Nisan</option>
+                    <option value="mayis">Mayıs</option>
+                    <option value="haziran">Haziran</option>
+                    <option value="temmuz">Temmuz</option>
+                    <option value="agustos">Ağustos</option>
+                    <option value="eylul">Eylül</option>
+                    <option value="ekim">Ekim</option>
+                    <option value="ekim">Kasım</option>
+                    <option value="aralik">Aralık</option>
+                </select>
+
+                <ol class="sidebar__events-list">
+                    <li class="sidebar__events-item" data-day="5">
+                        <span>5</span>
+                        <span>İstanbul LM Buluşması</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="12">
+                        <span>12</span>
+                        <span>Ankara LM Buluşması</span>                    
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>20</span>
+                        <span>İzmir LM Buluşması</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>24</span>
+                        <span>Rize LM Buluşması</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>29</span>
+                        <span>Mardin LM Buluşması</span>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="sidebar__events" style="height: 500px;">
+                <h2 class="sidebar__events-title heading-secondary" style="margin-bottom: 10px;">Yayınlar</h2>
+                <img src="assets/images/icardi.jpg" alt="">
+                
+
+                <!-- <ol class="sidebar__events-list">
+                    <li class="sidebar__events-item" data-day="5">
+                        <img src="assets/images/icardi.jpg" alt="">
+                    </li>
+                </ol> -->
+            </section>
+        </div>
+        <footer class="sidebar__footer footer" style="margin-top: 50px;">
+            <ul class="footer__socials">
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-google"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-discord"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">gizlilik politikası</a>
+                </li>
+                <span>&</span>
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">kullanım sözleşmesi</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">
+                all rights reserved &copy; 2023 <br>
+                powered by <a href="https://limitlessmakers.gsb.gov.tr">Limitless Makers</a>
+            </p>
+        </footer>
+    </aside>
+
+    <main class="main flex-main">
+        <section class="onboarding">
+            <p class="onboarding__title">Mezun ağımıza sen de katkı sağlamak ister misin?</p>
+            <p class="onboarding__description">Bizimle iletişime geçebilirsin:</p>
+            <svg class="onboarding__icon">
+                <use xlink:href="assets/sprite.svg#icon-whatsapp-filled"></use>
+            </svg>
+        </section>
+
+        <section class="recommended-profiles" style="display: flex;">
+            <div class="recommended-profiles__bottom" style="display: inline-flex;">
+                <div class="profile-card" style="text-align: left; width: 100%; height: auto; padding: 15px; border-radius: 15px; margin-right: 10px;">
+                    <section>
+                        <h3 style="text-align: left; margin-bottom: 15px;">Hakkımda</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptas eos qui consequatur ad dolore illo, recusandae ducimus id, pariatur esse autem provident ipsa iusto enim iure delectus necessitatibus. Tempora laborum nulla sequi porro voluptatum commodi perspiciatis id maxime facilis odit ratione consequatur, quo repellendus? Expedita dicta sunt aspernatur et pariatur voluptatum accusantium distinctio ratione, aperiam hic qui, quia vero fuga consequuntur vel recusandae. Ullam, enim, impedit consequuntur a quo odit laboriosam sed deleniti soluta molestias nobis, dolorem fugit similique eos ex vitae dignissimos quis! Modi et at doloremque, voluptas qui vel debitis praesentium itaque quae error saepe totam necessitatibus.</p>
+                    </section>
+                </div>    
+            </div>
+
+            <!-- <div class="recommended-profiles__bottom" style="display: inline !important; margin: 0;">
+                <div class="profile-card" style="text-align: left; width: 100%; height: auto; padding: 15px; border-radius: 15px;">
+                    <section>
+                        <h3 style="text-align: left; margin-bottom: 15px; padding-top: 20px;">İletişim </h3>
+                        <ul class="profile-card__info-list">
+                            <li class="profile-card__info-item">
+                                <p>0555 555 5555</p>
+                            </li>
+    
+                            <li class="profile-card__info-item">
+                                <svg class="profile-card__info-icon">
+                                    <use xlink:href="assets/sprite.svg#icon-school"></use>
+                                </svg>
+                                <p class="profile-card__info-text">Meow High School</p>
+                            </li>
+    
+                            <li class="profile-card__info-item">
+                                <svg class="profile-card__info-icon">
+                                    <use xlink:href="assets/sprite.svg#icon-school"></use>
+                                </svg>
+                                <p class="profile-card__info-text">MW University</p>
+                            </li>
+                        </ul>
+                    </section>
+                </div>    
+            </div> -->
+        </section>
+    </main>
+</body>
+</html>
