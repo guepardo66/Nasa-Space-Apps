@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="icon" href="assets/icons/gamepad-solid.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="scripts/script.js" defer></script>
+</head>
+<body class="grid-main">
+    <header class="header">
+        <h1 class="header__heading">
+            <a href="#" class="header__heading-link">
+                <img src="assets/images/logo.png" alt="LM Mezun Ağı Logo">
+                <span class="header__heading-text">EMEET</span>
+            </a>
+        </h1>
+        
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item"><a href="Main Page.html" class="header__navigation-link">Home Page</a></li>
+                <li class="header__navigation-item"><a href="forum.html" class="header__navigation-link">Forum</a></li>
+                <li class="header__navigation-item"><a href="map.html" class="header__navigation-link">Map</a></li>
+                <li class="header__navigation-item">
+                    <div class="dropdown">
+                    <button class="dropbtn" style="text-decoration: underline;">Kids</button>
+                        <div class="dropdown-content">
+                            <a href="games.html">Games</a>
+                            <a href="animations.html">Animations</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__search">
+            <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+            </svg>
+            <input type="text" class="header__search-input">
+        </div>
+
+        <section class="header__user">
+            <a href="#" class="header__user-settings">
+                <svg class="header__user-icon--settings header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="header__user-notifications">
+                <svg class="header__user-icon--notifications header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                </svg>
+            </a>
+
+            <a href="profil.html" class="header__user-profile">
+                <img src="assets/images/nasa-logo.jpg" alt="User" class="header__user-profile-image" style="width: 40px; border-radius: 20px;">
+            </a>
+        </section>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar__content">
+            <section class="sidebar__profile">
+                <figure class="sidebar__profile-image">
+                    <a href="profil.html">
+                        <img src="assets/images/nasa-logo.jpg" alt="Kullanıcı profil fotoğrafı" class="sidebar__profile-image-source">
+                    </a>
+                    <figcaption class="sidebar__profile-image-level"><span>2</span></figcaption>
+                </figure>
+                
+                <section class="sidebar__profile-details">
+                    <p class="sidebar__profile-fullname">Limitless Space</p>
+                    <p class="sidebar__profile-username">@limitless_space</p>
+    
+                    <div class="sidebar__profile-followers">
+                        <svg class="sidebar__profile-followers-icon">
+                            <use xlink:href="assets/sprite.svg#icon-person"></use>
+                        </svg>
+                        <p class="sidebar__profile-followers-count">75</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="sidebar__events">
+                <h2 class="sidebar__events-title heading-secondary">Upcoming Events</h2>
+                <select name="events-month" id="events-month" class="sidebar__events-month">
+                    <option value="ocak">January</option>
+                    <option value="şubat">February</option>
+                    <option value="mart">March</option>
+                    <option value="nisan">April</option>
+                    <option value="mayis">May</option>
+                    <option value="haziran">June</option>
+                    <option value="temmuz">July</option>
+                    <option value="agustos">August</option>
+                    <option value="eylul">September</option>
+                    <option value="ekim">October</option>
+                    <option value="ekim">November</option>
+                    <option value="aralik">December</option>
+                </select>
+
+                <ol class="sidebar__events-list">
+                    <li class="sidebar__events-item" data-day="5">
+                        <span>5</span>
+                        <span>Ankara Nasa Space Apps</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="12">
+                        <span>12</span>
+                        <span>New York Nasa Space Apps</span>                    
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>20</span>
+                        <span>EMEET System Update</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>24</span>
+                        <span>Teknofest Space Festival</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>29</span>
+                        <span>Global Nasa Space Apps</span>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="sidebar__events" style="height: 500px;">
+                <h2 class="sidebar__events-title heading-secondary" style="margin-bottom: 10px;">Publications</h2>
+                <img src="assets/images/magazine.jpg" alt="">
+            </section>
+        </div>
+        <footer class="sidebar__footer footer" style="margin-top: 50px;">
+            <ul class="footer__socials">
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-google"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-discord"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">Privacy Policy</a>
+                </li>
+                <span>&</span>
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">Usage Agreement</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">
+                all rights reserved &copy; 2023 <br>
+                powered by <a href="https://limitlessmakers.gsb.gov.tr">Limitless Makers</a>
+            </p>
+        </footer>
+    </aside>
+
+    <main class="main flex-main">
+        <iframe src="hangman/index.html" frameborder="0" style="height: 90%;"></iframe>
+    </main>
+</body>
+</html>

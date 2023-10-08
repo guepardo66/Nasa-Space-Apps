@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link rel="icon" href="assets/icons/map-location-dot-solid.svg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <style>
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; left: 354px; top: 96px; bottom: 0; width: 75%; }
+    </style>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body class="grid-main">
+    <header class="header">
+        <h1 class="header__heading">
+            <a href="#" class="header__heading-link">
+                <img src="assets/images/logo.png" alt="LM Mezun Ağı Logo">
+                <span class="header__heading-text">EMEET</span>
+            </a>
+        </h1>
+        
+        <nav class="header__navigation">
+            <ul class="header__navigation-list">
+                <li class="header__navigation-item"><a href="Main Page.html" class="header__navigation-link" >Home Page</a></li>
+                <li class="header__navigation-item"><a href="forum.html" class="header__navigation-link">Forum</a></li>
+                <li class="header__navigation-item"><a href="map.html" class="header__navigation-link" aria-current="page">Map</a></li>
+                <li class="header__navigation-item">
+                    <div class="dropdown">
+                    <button class="dropbtn">Kids</button>
+                        <div class="dropdown-content">
+                            <a href="games.html">Games</a>
+                            <a href="animations.html">Animations</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__search">
+            <svg class="header__search-icon">
+                <use xlink:href="assets/sprite.svg#icon-search"></use>
+            </svg>
+            <input type="text" class="header__search-input">
+        </div>
+
+        <section class="header__user">
+            <a href="#" class="header__user-settings">
+                <svg class="header__user-icon--settings header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                </svg>
+            </a>
+
+            <a href="#" class="header__user-notifications">
+                <svg class="header__user-icon--notifications header__user-icon">
+                    <use xlink:href="assets/sprite.svg#icon-notifications_none"></use>
+                </svg>
+            </a>
+
+            <a href="profil.html" class="header__user-profile">
+                <img src="assets/images/nasa-logo.jpg" alt="User" class="header__user-profile-image" style="width: 40px; border-radius: 20px;">
+            </a>
+        </section>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar__content">
+            <section class="sidebar__profile">
+                <figure class="sidebar__profile-image">
+                    <a href="profil.html">
+                        <img src="assets/images/nasa-logo.jpg" alt="Kullanıcı profil fotoğrafı" class="sidebar__profile-image-source">
+                    </a>
+                    <figcaption class="sidebar__profile-image-level"><span>2</span></figcaption>
+                </figure>
+                
+                <section class="sidebar__profile-details">
+                    <p class="sidebar__profile-fullname">Limitless Space</p>
+                    <p class="sidebar__profile-username">@limitless_space</p>
+    
+                    <div class="sidebar__profile-followers">
+                        <svg class="sidebar__profile-followers-icon">
+                            <use xlink:href="assets/sprite.svg#icon-person"></use>
+                        </svg>
+                        <p class="sidebar__profile-followers-count">75</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="sidebar__events">
+                <h2 class="sidebar__events-title heading-secondary">Upcoming Events</h2>
+                <select name="events-month" id="events-month" class="sidebar__events-month">
+                    <option value="ocak">January</option>
+                    <option value="şubat">February</option>
+                    <option value="mart">March</option>
+                    <option value="nisan">April</option>
+                    <option value="mayis">May</option>
+                    <option value="haziran">June</option>
+                    <option value="temmuz">July</option>
+                    <option value="agustos">August</option>
+                    <option value="eylul">September</option>
+                    <option value="ekim">October</option>
+                    <option value="ekim">November</option>
+                    <option value="aralik">December</option>
+                </select>
+
+                <ol class="sidebar__events-list">
+                    <li class="sidebar__events-item" data-day="5">
+                        <span>5</span>
+                        <span>Ankara Nasa Space Apps</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="12">
+                        <span>12</span>
+                        <span>New York Nasa Space Apps</span>                    
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>20</span>
+                        <span>EMEET System Update</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>24</span>
+                        <span>Teknofest Space Festival</span>
+                    </li>
+
+                    <li class="sidebar__events-item" data-day="20">                        
+                        <span>29</span>
+                        <span>Global Nasa Space Apps</span>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="sidebar__events" style="height: 500px;">
+                <h2 class="sidebar__events-title heading-secondary" style="margin-bottom: 10px;">Publications</h2>
+                <img src="assets/images/magazine.jpg" alt="">
+            </section>
+        </div>
+        <footer class="sidebar__footer footer" style="margin-top: 50px;">
+            <ul class="footer__socials">
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-google"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-discord"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__socials-item">
+                    <a href="#" class="footer__socials-link">
+                        <svg class="footer__socials-icon">
+                            <use xlink:href="assets/sprite.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__links">
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">Privacy Policy</a>
+                </li>
+                <span>&</span>
+                <li class="footer__links-item">
+                    <a href="#" class="footer__links-link">Usage Agreement</a>
+                </li>
+            </ul>
+            <p class="footer__copyright">
+                all rights reserved &copy; 2023 <br>
+                powered by <a href="https://limitlessmakers.gsb.gov.tr">Limitless Makers</a>
+            </p>
+        </footer>
+    </aside>
+
+    <div id="map"></div>
+
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoib3R0b21hbnNhZmEiLCJhIjoiY2xsZ3QxbXcyMDRwcTNwbGkycWlqNHZhdCJ9.9CmwCUUs5mrbpNT0UpBptw';
+    const mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+
+    const locations = ['Ankara, Turkey', 'Beijing, China'];
+
+    Promise.all(
+        locations.map(location => 
+            mapboxClient.geocoding.forwardGeocode({
+                query: location,
+                autocomplete: true,
+                limit: 1
+            }).send()
+        )
+    ).then((responses) => {
+        const features = responses.map(response => response.body.features[0]);
+
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: features[0].center,
+            zoom: 6
+        });
+
+// ...
+
+features.forEach((feature, index) => {
+    const markerElement = document.createElement('div');
+    markerElement.className = 'ozellestirilmis-isaretci'; // İşaretçi için bir CSS sınıfı oluşturun
+
+    // İşaretçinin HTML içeriğini özelleştirebilirsiniz
+    markerElement.innerHTML = '<img src="assets/images/konum.png" alt="İşaretçi">';
+
+    // CSS ile işaretçinin boyutunu belirleyin
+    markerElement.style.width = '40px'; // İhtiyaca göre genişliği ayarlayın
+    markerElement.style.height = '40px'; // İhtiyaca göre yüksekliği ayarlayın
+
+    // Özelleştirilmiş elementle yeni bir mapboxgl.Marker oluşturun
+    const marker = new mapboxgl.Marker({ element: markerElement }).setLngLat(feature.center).addTo(map);
+
+    // İkon tıklama olayı ekleyin
+    markerElement.addEventListener('click', () => {
+        if (index === 0) {
+            // Ankara ikonuna tıklanırsa turkey.html sayfasına yönlendirin
+            window.location.href = 'turkıye.html';
+        } else if (index === 1) {
+            // Beijing ikonuna tıklanırsa china.html sayfasına yönlendirin
+            window.location.href = 'urimci.html';
+        }
+    });
+});
+
+// ...
+
+    });
+</script>
+
+</body>
+</html>
